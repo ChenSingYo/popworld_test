@@ -204,6 +204,10 @@
     margin-bottom: 2rem;
   }
 
+  section.npm_activity_container {
+    padding: 0 2rem;
+  }
+
   .exhib_video_container {
     position: relative;
     margin-bottom: 8rem;
@@ -215,11 +219,20 @@
     height: 30vw;
   }
 
-  .info_link_container {
+  .welcome_img {
+    width: 80%;
+  }
+
+  .welcome_msg {
+    width: 100%;
+  }
+
+  .footer_info_container .info_link_container {
+    padding: 1rem;
     grid-gap: 1rem;
   }
 
   footer .bg_img {
-    top: -9vw;
+    top: -5vw;
   }
 }

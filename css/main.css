@@ -72,7 +72,7 @@ header .btn_wrapper {
 header .btn_wrapper_mobile {
   display: flex;
   position: absolute;
-  top: 0;
+  top: -100%;
   background:#ffdccc;
   opacity: 0;
   width: 100%;
@@ -88,6 +88,7 @@ header .btn_wrapper_mobile {
 .btn_wrapper_mobile.show_mobile_nav {
   transform: translateY(0);
   opacity: 0.9;
+  top: 0;
   transition: all .5s ease-in-out;
 }
 
@@ -172,6 +173,7 @@ section.npm_activity_container {
 
 .single_activity {
   position: relative;
+  padding: 1rem;
 }
 
 .single_activity .activity_title {
