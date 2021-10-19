@@ -1,3 +1,5 @@
+
+
 @media screen and (max-width: 1000px) {
   section.npm_activity_container {
     padding: 0 5.5rem 4rem 5.5rem;
@@ -140,7 +142,8 @@
   }
 }
 
-@media screen and (max-width: 550px) {
+
+@media screen and (max-width: 500px) {
 
     header .btn_wrapper {
         display: flex;
@@ -154,6 +157,13 @@
 
     section.main_visual_wrapper {
         margin-top: 2rem;
+        padding: 1rem;
+    }
+
+    .exhib_video_container {
+        position: relative;
+        margin-bottom: 8rem;
+        text-align: center;
         padding: 1rem;
     }
 }
