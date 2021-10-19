@@ -15,6 +15,9 @@
     align-items: center;
     padding: 0 6rem;
   }
+  section.exhib_video_container {
+    margin-bottom: 0;
+  }
 
   .single_activity:nth-child(2) {
     margin: 0 0 2rem 0;
@@ -141,6 +144,11 @@
 }
 
 @media screen and (max-width: 500px) {
+  section.npm_info {
+    margin-top: 10rem;
+    margin-bottom: 12rem;
+  }
+
   .btn_wrapper .nav_btn {
     position: relative;
     border-radius: 0.5rem;
