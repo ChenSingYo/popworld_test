@@ -1,6 +1,6 @@
 @media screen and (max-width: 1000px) {
   section.npm_activity_container {
-    padding: 0 5.5rem 4rem 5.5rem;
+    padding: 0 2rem 4rem 2rem;
   }
 
   .single_activity .activity_title {
@@ -205,7 +205,7 @@
   }
 
   section.npm_activity_container {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
 
   .exhib_video_container {
@@ -215,8 +215,16 @@
     padding: 1rem;
   }
 
+  .npm_info .npm_news_container {
+    padding: 0rem 1rem;
+  }
+
   .btn_info_link {
     height: 30vw;
+  }
+
+  .welcome_msg_wrapper {
+    width: 90%;
   }
 
   .welcome_img {
