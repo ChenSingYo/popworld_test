@@ -197,6 +197,10 @@
   }
 
   .btn_info_link {
-    height: 43vw;
+    height: 50vw;
   }
+
+  footer .bg_img {
+    top: -9vw;
+}
 }

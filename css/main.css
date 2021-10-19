@@ -293,6 +293,7 @@ section.npm_info {
 }
 
 .open_time_title {
+  width: 100%;
   font-family: 'Kosugi Maru', 'Roboto', sans-serif;
   font-size: 1.6rem;
   padding: 0.5rem 0rem 0.5rem 0.8rem;
