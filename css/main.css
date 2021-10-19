@@ -206,7 +206,8 @@ section.npm_info {
   padding: 5rem;
   display: flex;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-top: 15rem;
+  margin-bottom: 12rem;
 }
 
 .npm_info .npm_news_container {
