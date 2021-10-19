@@ -71,38 +71,30 @@ header .btn_wrapper {
 
 header .btn_wrapper_mobile {
   display: flex;
-  display: none;
-  border: 1px blue solid;
-  position: relative;
+  position: absolute;
+  top: 0;
+  background:#ffdccc;
+  opacity: 0;
   width: 100%;
+  height: 100vh;
   justify-content: center;
   flex-direction: column;
   padding: 0 0.5rem;
+  z-index: 5;
+  transform: translateY(-100%);
+  transition: all .5s ease-in-out;
 }
 
-.btn_wrapper_mobile .icon_nav_mobile_ham {
-  cursor: pointer;
-  position: absolute;
-  left: 1rem;
-  top: 1rem;
-  color: #dd4e15;
-  transform: scale(2.2);
-}
-
-.btn_wrapper_mobile .icon_nav_mobile_close {
-  cursor: pointer;
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  color: #254c78;
-  transform: scale(1.5);
+.btn_wrapper_mobile.show_mobile_nav {
+  transform: translateY(0);
+  opacity: 0.9;
+  transition: all .5s ease-in-out;
 }
 
 .btn_wrapper_mobile .nav_btn_mobile {
   position: relative;
   text-align: center;
-  padding: 0.2rem 1rem 0.2rem 2.5rem;
-  margin: 0.5rem 2rem;
+  margin: 1rem 2rem;
   color: #dd4e15;
   cursor: pointer;
   border-bottom: 1px dashed;
@@ -111,18 +103,58 @@ header .btn_wrapper_mobile {
 .btn_wrapper_mobile .nav_btn_mobile a {
   font-family: 'Roboto', sans-serif;
   color: #dd4e15;
-  font-size: 1rem;
+  font-size: 2rem;
   font-weight: bolder;
+}
+
+
+.btn_mobile_controller .icon_nav_mobile_ham,
+.btn_mobile_controller .icon_nav_mobile_close {
+  cursor: pointer;
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  right: 0.5rem;
+  top: 0.5rem;
+  color: #dd4e15;
+  z-index: 5;
+  transition: all .2s
+}
+
+.btn_mobile_controller .icon_nav_mobile_close {
+  width: 2rem;
+  height: 2rem;
+  right: 0.8rem;
+  top: 0.8rem;
+}
+
+.btn_mobile_controller .icon_nav_mobile_close {
+  display: none;
+  background: url('https://api.iconify.design/icomoon-free/cross.svg?color=%23f24e1e&height=5') no-repeat center center / contain;
+  color:#dd4e15;
+}
+
+.btn_mobile_controller .icon_nav_mobile_ham {
+  background: url('https://api.iconify.design/icon-park-outline/hamburger-button.svg?color=%23f24e1e&height=7') no-repeat center center / contain;
+  color:#dd4e15;
+  display: none;
+}
+
+.btn_mobile_controller .icon_nav_mobile_close:hover,
+.btn_mobile_controller .icon_nav_mobile_ham:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s;
 }
 
 /* 主視覺區塊 */
 section.main_visual_wrapper {
   margin-top: 2rem;
+  text-align: center;
   padding: 1rem 16vw;
 }
 
 .main_visual_wrapper .mv_title {
-  padding: 0 16vw;
+  padding: 0 12vw;
   margin-bottom: 2rem;
 }
 
@@ -161,7 +193,6 @@ section.npm_activity_container {
   transition: box-shadow 0.1s;
 }
 
-
 .single_activity:nth-child(1) .zhuyin {
   color: #dd4e15;
 }
@@ -194,14 +225,14 @@ section.exhib_video_container::before {
   left: 50%;
   top: 50%;
   width: 100%;
-  height: 60%;
+  height: 250px;
   transform: translate(-50%, -50%);
   background: #ffffff;
   opacity: 0.5;
 }
 
 section.exhib_video_container::after {
-  height: 50%;
+  height: 200px;
   opacity: 1;
   z-index: 5;
 }
@@ -211,7 +242,6 @@ section.npm_info {
   padding: 5rem;
   display: flex;
   justify-content: center;
-  margin-top: 3rem;
   margin-bottom: 3rem;
 }
 
@@ -403,9 +433,16 @@ footer .bg_img {
 
 .btn_sm_info_link {
   margin-right: 1rem;
+  cursor: pointer;
   background: #f8f2df;
   padding: 0.2rem 0.8rem;
   border-radius: 0.8rem;
+}
+
+.btn_sm_info_link:hover {
+  background: #ffffff;
+  color: #dd4e15;
+  font-weight: bold;
 }
 
 .info_link_container {
@@ -418,10 +455,21 @@ footer .bg_img {
 }
 
 .btn_info_link {
+  cursor: pointer;
   height: 10vw;
   position: relative;
   background: #fff5c2;
   border-radius: 0.8rem;
+}
+
+.btn_info_link:hover {
+  background: #ffffff;
+  color: #dd4e15;
+  font-weight: bold;
+}
+
+.btn_info_link:hover::before {
+  background: #fff5c2;
 }
 
 .btn_info_link::before {
@@ -431,8 +479,8 @@ footer .bg_img {
   left: 50%;
   transform: translateX(-50%);
   background-color: #ffff;
-  width: 70%;
-  height: 70%;
+  width: 60%;
+  height: 60%;
   border-radius: 50%;
 }
 
@@ -473,8 +521,8 @@ footer .bg_img {
   align-items: center;
   right: 1.5rem;
   bottom: 1.5rem;
-  width: 5vw;
-  height: 5vw;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   background: #dd4e15;
   color: #ffffff;
@@ -484,9 +532,8 @@ footer .bg_img {
 }
 
 .tap_to_top:hover {
-  background: #E67A50;
+  background: #e67a50;
 }
-
 
 @keyframes toTopAni {
   0% {
