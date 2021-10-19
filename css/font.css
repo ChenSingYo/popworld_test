@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Roboto:wght@300;400;500;700&display=swap');
+
+html {
+  font-family: 'Kosugi Maru', 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+[zhuyin] [length='3'] h-yin {
+  top: 0.1em;
+  font-size: 1rem;
+  line-height: 0.9;
+}
+
+[zhuyin] [length='2'] h-yin {
+  top: 0.3em;
+}
+
+[zhuyin] [length='2'] h-diao {
+  bottom: -0.3em;
+}
+
+[zhuyin] [length='3'] h-diao {
+  bottom: -0.3em;
+}
+
+[zhuyin] [length='1'] h-diao {
+  bottom: -0.3em;
+}
+
+h-ruby.zhuyin h-diao {
+  position: absolute;
+  right: -0.85em;
+  bottom: 0.5em;
+  display: block;
+  font-size: 1.2em;
+}
+
+[zhuyin] h-diao,
+[zhuyin] h-yin {
+  line-height: 0.9;
+  bottom: 0.1em;
+  font-size: 0.85em;
+}
+
+.activity_title [zhuyin] [length='2'] h-yin,
+.activity_title [zhuyin] [length='2'] h-yin {
+  top: 0.15em;
+}
+
+.activity_title h-ruby.zhuyin h-diao {
+  font-size: 1em;
+  right: -0.85em;
+  top: 0.15em;
+}
+.news_title h-ruby.zhuyin h-diao {
+  font-size: 1em;
+  right: -0.89em;
+  top: 0.3em;
+}
+
+.open_time_title [zhuyin] [length='3'] h-yin,
+.news_title [zhuyin] [length='3'] h-yin {
+  top: 0.2em;
+  font-size: 1.2rem;
+  line-height: 0.9;
+}
+
+.open_time_title [zhuyin] [length='1'] h-yin {
+  top: 0.5em;
+}
+
+.btn_more_news [zhuyin] [length='3'] h-yin,
+.welcome_msg [zhuyin] [length='3'] h-yin {
+  top: 0.2em;
+  font-size: 0.9rem;
+  line-height: 0.9;
+}

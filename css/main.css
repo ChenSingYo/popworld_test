@@ -1,0 +1,492 @@
+html {
+  background: #f8f2df;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* 頁頭 */
+header .btn_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  padding-right: 4rem;
+}
+
+.btn_wrapper .nav_btn {
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0rem 0.5rem 0.1rem 2rem;
+  margin-top: 1rem;
+  border: 1px solid #dd4e15;
+  background-color: #dd4e15;
+  margin-right: 0.5rem;
+  cursor: pointer;
+}
+
+.btn_wrapper .nav_btn a {
+  font-family: 'Roboto', sans-serif;
+  color: #ffff;
+  font-size: 0.6rem;
+  font-weight: bolder;
+}
+
+.btn_wrapper .nav_btn:hover {
+  background-color: #f8f2df;
+}
+
+.btn_wrapper .nav_btn:hover a {
+  color: #dd4e15;
+}
+
+.nav_btn::before {
+  font-size: 1rem;
+  color: #ffff;
+  position: absolute;
+  top: 0.2rem;
+  left: 0.6rem;
+  transform: scale(1);
+}
+
+.nav_btn:nth-child(1)::before {
+  content: url('https://api.iconify.design/ant-design/home-filled.svg?color=white');
+}
+.nav_btn:nth-child(1):hover::before {
+  content: url('https://api.iconify.design/ant-design/home-filled.svg?color=%23dd4e15');
+}
+
+.nav_btn:nth-child(2)::before {
+  content: url('https://api.iconify.design/icomoon-free/tree.svg?color=white');
+}
+.nav_btn:nth-child(2):hover::before {
+  content: url('https://api.iconify.design/icomoon-free/tree.svg?color=%23dd4e15');
+}
+
+.nav_btn:nth-child(3)::before {
+  content: url('https://api.iconify.design/fluent/document-header-16-filled.svg?color=white');
+}
+.nav_btn:nth-child(3):hover::before {
+  content: url('https://api.iconify.design/fluent/document-header-16-filled.svg?color=%23dd4e15');
+}
+
+/* header for mobile */
+
+header .btn_wrapper_mobile {
+  display: flex;
+  display: none;
+  border: 1px blue solid;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 0.5rem;
+}
+
+.btn_wrapper_mobile .icon_nav_mobile_ham {
+  cursor: pointer;
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  color: #dd4e15;
+  transform: scale(2.2);
+}
+
+.btn_wrapper_mobile .icon_nav_mobile_close {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  color: #254c78;
+  transform: scale(1.5);
+}
+
+.btn_wrapper_mobile .nav_btn_mobile {
+  position: relative;
+  text-align: center;
+  padding: 0.2rem 1rem 0.2rem 2.5rem;
+  margin: 0.5rem 2rem;
+  color: #dd4e15;
+  cursor: pointer;
+  border-bottom: 1px dashed;
+}
+
+.btn_wrapper_mobile .nav_btn_mobile a {
+  font-family: 'Roboto', sans-serif;
+  color: #dd4e15;
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+/* 主視覺區塊 */
+section.main_visual_wrapper {
+  margin-top: 2rem;
+  padding: 1rem 16vw;
+}
+
+.main_visual_wrapper .mv_title {
+  padding: 0 16vw;
+  margin-bottom: 2rem;
+}
+
+section.npm_activity_container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  padding: 0 8rem 4rem 8rem;
+}
+
+/* 活動區塊 */
+.single_activity:nth-child(2) {
+  margin: 0 2.5rem;
+}
+
+.single_activity {
+  position: relative;
+}
+
+.single_activity .activity_title {
+  width: 100%;
+  font-family: 'Kosugi Maru', 'Roboto';
+  font-size: 1.3rem;
+  font-weight: 600;
+  background: #ffffff;
+  text-align: center;
+  padding: 0.3rem 0.5rem;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+}
+
+.single_activity:nth-child(1) .zhuyin {
+  color: #dd4e15;
+}
+
+.single_activity:nth-child(2) .zhuyin {
+  color: #276eb5;
+}
+
+.single_activity:nth-child(3) .zhuyin {
+  color: #418241;
+}
+
+/* 影片區塊 */
+
+section.exhib_video_container {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+}
+
+section.exhib_video_container iframe {
+  position: relative;
+  z-index: 10;
+}
+
+section.exhib_video_container::after,
+section.exhib_video_container::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 60%;
+  transform: translate(-50%, -50%);
+  background: #ffffff;
+  opacity: 0.5;
+}
+
+section.exhib_video_container::after {
+  height: 50%;
+  opacity: 1;
+  z-index: 5;
+}
+
+/* 最新消息 */
+section.npm_info {
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 4rem;
+}
+
+.npm_info .npm_news_container {
+  display: flex;
+  flex-direction: column;
+  border: 3px solid #ffdccc;
+  background: #ffffff;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  padding: 0rem 2rem;
+}
+
+.npm_news_container .news_title {
+  font-family: 'Kosugi Maru', 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 3px solid #ffdccc;
+}
+
+.npm_news_container .news_events {
+  margin-bottom: 1rem;
+}
+
+.single_event {
+  position: relative;
+  font-size: 0.9rem;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.single_event::before {
+  content: '';
+  position: absolute;
+  background-image: url('../img/dot_with_space.svg');
+  background-repeat: repeat-x;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+}
+
+.single_event .e_date {
+  color: #dd4e15;
+  letter-spacing: 1px;
+}
+
+.btn_more_news_wrapper {
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.btn_more_news {
+  margin: 0 auto;
+  padding: 0.3rem 0;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  color: #ffff;
+  width: 8rem;
+  background: #dd4e15;
+  border-radius: 0.5rem;
+  border-bottom: 5px solid #9d370b;
+}
+
+/* 開館時間 */
+
+.npm_info .npm_open_time {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 3px solid #ffea85;
+  background: #ffffff;
+  margin-right: 1rem;
+  border-radius: 1rem;
+  padding: 0rem 1rem;
+}
+
+.open_time_title {
+  font-family: 'Kosugi Maru', 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  padding: 0.5rem 0rem 0.5rem 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 3px solid #ffea85;
+  margin-bottom: 1.5rem;
+}
+
+.open_time_info div {
+  margin-bottom: 0.5rem;
+}
+
+.welcome_msg_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.welcome_img {
+  width: 100%;
+  height: 70%;
+  background-image: url('../img/doll.png');
+  background-position: bottom center;
+  background-size: 80%;
+  background-repeat: no-repeat;
+  backface-visibility: hidden;
+}
+
+.welcome_msg {
+  font-family: 'Kosugi Maru', 'Roboto', sans-serif;
+  padding: 0.5rem 1rem;
+  background: #ffea85;
+  border-radius: 0.8rem;
+}
+
+/* footer */
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem 2rem;
+  background: #ffea85;
+}
+
+footer .bg_img {
+  position: absolute;
+  top: -5vw;
+  left: 0;
+  z-index: -1;
+}
+
+.footer_logos_container {
+  order: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.footer_logo {
+  width: 16%;
+  height: 3rem;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.logo_npm {
+  background-image: url('../img/logo_npm.png');
+}
+
+.logo_CG {
+  background-image: url('../img/logo_cg.png');
+  background-size: 67%;
+}
+
+.logo_acess_mark {
+  margin-left: auto;
+  background-size: 60%;
+  background-position: top right;
+  background-image: url('../img/logo_access_mark.png');
+}
+
+.footer_info_container {
+  order: 2;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.5rem;
+  display: flex;
+}
+
+.footer_info_container .info_wrapper {
+  order: 1;
+  max-width: 50%;
+  margin-right: 1rem;
+}
+
+.info_wrapper .info_sm_link_container {
+  display: flex;
+  padding: 1rem 1rem 1rem 0;
+  justify-content: flex-start;
+}
+
+.btn_sm_info_link {
+  margin-right: 1rem;
+  background: #f8f2df;
+  padding: 0.2rem 0.8rem;
+  border-radius: 0.8rem;
+}
+
+.info_link_container {
+  order: 2;
+  width: 50%;
+  margin-left: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 0.5rem;
+}
+
+.btn_info_link {
+  height: 10vw;
+  position: relative;
+  background: #fff5c2;
+  border-radius: 0.8rem;
+}
+
+.btn_info_link::before {
+  content: '';
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ffff;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+}
+
+.btn_info_link::after {
+  content: '';
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 0.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.btn_info_link:nth-child(1)::after {
+  content: '展場位置';
+}
+
+.btn_info_link:nth-child(2)::after {
+  content: '時間票價資訊';
+}
+
+.btn_info_link:nth-child(3)::after {
+  content: '故宮網路會員';
+}
+
+.btn_info_link:nth-child(4)::after {
+  content: '故宮粉絲專頁';
+}
+
+/* 回到頂部按鈕 */
+
+.tap_to_top {
+  position: fixed;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 5vw;
+  height: 5vw;
+  border-radius: 50%;
+  background: #dd4e15;
+  color: #ffffff;
+  z-index: 999;
+  opacity: 0;
+  animation: toTopAni 0.5s 0.5s both;
+}
+
+.tap_to_top:hover {
+  background: #E67A50;
+}
+
+
+@keyframes toTopAni {
+  0% {
+    opacity: 0;
+    transform: translateX(150%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
