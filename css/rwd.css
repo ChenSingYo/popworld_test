@@ -219,6 +219,10 @@
     padding: 0rem 1rem;
   }
 
+  .btn_more_news {
+    width: 80%;
+  }
+
   .btn_info_link {
     height: 30vw;
   }
