@@ -1,3 +1,16 @@
+@media screen and (min-width: 1000px) {
+  .footer_info_container {
+    margin-top: 1.5rem;
+  }
+
+  .logo_CG {
+    background-size: 50%;
+  }
+  .logo_acess_mark {
+    background-size: 40%;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   section.npm_activity_container {
     padding: 0 2rem 4rem 2rem;
@@ -15,8 +28,11 @@
     align-items: center;
     padding: 0 6rem;
   }
+
   section.exhib_video_container {
-    margin-bottom: 0;
+    position: relative;
+    text-align: center;
+    padding: 1rem 10%;
   }
 
   .single_activity:nth-child(2) {
@@ -213,6 +229,10 @@
     margin-bottom: 8rem;
     text-align: center;
     padding: 1rem;
+  }
+
+  section.exhib_video_container iframe {
+    height: 60vw;
   }
 
   .npm_info .npm_news_container {
